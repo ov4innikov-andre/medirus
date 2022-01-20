@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+	
+	<title>Document</title>
+</head>
+
+<body>
+    <div class="block">
+  <h2>Модульная конструкция стелек igli</h2>
+  <div class="block_one">
+    <div class="pic">
+      <ul class="picture"> <img src="img/igli-Dynamik-faded-2-1.png" alt="" class="picture_main">
+        <li class="circle">
+          <a href="#postingi"></a>
+        </li>
+        <li class="circle">
+          <a href="#karbon"></a>
+        </li>
+        <li class="circle">
+          <a href="#lozhe"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="text">
+      <div>Разные стельки отличаются друг от друга толщиной карбоновой основы и мягкого ложа, а также свободно размещаемыми элементами (постингами).</div>
+
+      <div id="karbon" class="to-be-changed">
+        <p class="bold">1. Карбоновая основа</p>
+        <p>Сохраняет естественную подвижность стопы, а также позволяет мышцам стопы и голени активно работать на всех этапах шага.</p>
+      </div>
+
+      <div id="postingi" class="to-be-changed">
+        <p class="bold">2. Постинги</p>
+
+        <p>Опорно-корригирующие элементы устанавливаются специалистом с учетом особенностей конкретной стопы. Форму и размеры постингов можно менять, что позволяет разделить коррекцию на этапы. Постепенное изменение биомеханики переносится комфортнее
+          и является естественным для опорно-двигательной системы. </p>
+      </div>
+      <div id="lozhe" class="to-be-changed">
+        <p class="bold">
+          3. Мягкое полимерное ложе</strong>
+        </p>
+
+        <p>Приятное коже покрытие обеспечивает комфорт при использовании в течение всего дня. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Форма обратной связи -->
+<div class="block-second">
+  <form class="form-request">
+    <div class="first">
+
+      <div class="column">
+        <label>
+          <div class="title-input">Ваше имя <span class="pink">*</span></div>
+          <input type="text" class="" placeholder="" required>
+        </label>
+      </div>
+
+      <div class="column"> <label>
+          <div class="title-input">Ваш телефон <span class="pink">*</span></div>
+          <input type="text" class="phone-field" name="phone" data-rule-required="true" data-rule-minlength="10" data-msg="Введите номер телефона" required>
+        </label></div>
+      <div class="column">
+        <label>
+          <div class="title-input">Номер дисконтной карты</div>
+          <input type="text" class="" placeholder="">
+        </label>
+      </div>
+      <div class="column">
+        <label>
+          <div class="title-input">Назначение врача (jpg, png, pdf)</div>
+          <input type="file">
+
+        </label>
+      </div>
+
+    </div>
+    <div class="second">
+      <div class="column"> <label>
+          <div class="title-input">Салон <span class="pink">*</span></div>
+          <select class="select" id="metro" required>
+            <option value="leninsky" selected>м. Ленинский проспект</option>
+            <option value="okt">м. Октябрьская</option>
+            <option value="akadem">м. Академическая</option>
+          </select>
+          <div id="leninsky" class="adress">
+            <div><img src="img/geo.png"> Санкт-Петербург, бульвар Новаторов, дом 13</div>
+            <div><img src="img/clock.png"> пн-пт: с 9:00 до 21:00, сб-вс: с 10:00 до 20:00</div>
+          </div>
+          <div id="okt" class="adress" style="display:none"> </div>
+          <div id="akadem" class="adress" style="display:none"> </div>
+        </label></div>
+
+      <div class="column date">
+        <div class="part_one">
+          <label>
+            <div class="title-input">Дата <span class="pink">*</span></div>
+            <div class="datetime"><input type="date" value="2022-01-19" /></div>
+          </label>
+        </div>
+        <div class="part_two">
+          <label>
+            <div class="title-input">Время <span class="pink">*</span></div>
+            <select class="time" required>
+              <option selected>9:30</option>
+              <option>10:00</option>
+              <option>10:30</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="checkbox column">
+        <input type="checkbox" id="checkbox_1" checked required>
+        <label for="checkbox_1" class="checkbox-text">Я соглашаюсь с <a href="">Политикой в отношении<br> обработки персональных данных</a> <span class="pink">*</span></span></label>
+      </div>
+
+      <div class="column button"><label><input type="submit" value="Записаться" /></label>
+        <div>* Поля, обязательные для заполнения</div>
+      </div>
+    </div>
+  </form>
+</div>
+	<script>
+	$(function () {
+  $("#metro").change(function () {
+    $(".adress").hide();
+    $("#" + $(this).val()).show();
+  });
+});
+
+$(".phone-field").inputmask("+7(999)999-9999");
+jQuery.validator.addMethod("checkMaskPhone", function (value, element) {
+  return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+});
+
+var form = $(".form-request");
+
+
+$.validator.addClassRules({
+  "phone-field": {
+    checkMaskPhone: true
+  }
+});
+
+form.submit(function (e) {
+  e.preventDefault();
+  if (form.valid()) {
+    alert("Форма отправлена");
+  }
+  return;
+});
+
+	</script>
+	
+<script>
+$(document).ready(function() {
+	$('li').on('click', function() {
+		$('li').removeClass('active');
+    $(this).addClass('active');
+	});
+});
+</script>	
+	
+	
+</body>
+
+</html>
