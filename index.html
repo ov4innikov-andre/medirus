@@ -7,54 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  $('input[id$=tbDate]').datepicker({
+  monthNames: ['Январь', 'Февраль', 'Март', 'Апрель',
+'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь',
+'Октябрь', 'Ноябрь', 'Декабрь'],
+monthNamesShort: [ "января","февраля","марта","апреля","мая","июня",
+	"июля","августа","сентября","октября","ноября","декабря" ],
+ dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+ firstDay: 1,
+ dayNames: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
+ 
+    		dateFormat: 'd M, DD',
+			
 	
+		});
+  } );
+  </script>
+
 	<title>Document</title>
 </head>
 
 <body>
     <div class="block">
-  <h2>Модульная конструкция стелек igli</h2>
-  <div class="block_one">
-    <div class="pic">
-      <ul class="picture"> <img src="img/igli-Dynamik-faded-2-1.png" alt="" class="picture_main">
-        <li class="circle">
-          <a href="#postingi"></a>
-        </li>
-        <li class="circle">
-          <a href="#karbon"></a>
-        </li>
-        <li class="circle">
-          <a href="#lozhe"></a>
-        </li>
-      </ul>
+        <h2>Модульная конструкция стелек igli</h2>
+        <div class="block_one">
+            <div class="pic">
+                <div class="picture"> <img src="img/igli-Dynamik-faded-2-1.png" alt="" class="picture_main">
+                    <div class="circle_one">
+                        <a href="#" id="two"></a>
+                    </div>
+                    <div class="circle_two">
+                        <a href="#" id="one"></a>
+                    </div>
+                    <div class="circle_three">
+                        <a href="#" id="three"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class="text_one">Разные стельки отличаются друг от друга толщиной карбоновой основы и мягкого ложа, а также свободно размещаемыми элементами (постингами).</div>
+
+                <div class="to-be-changed" >
+                    <p><a href="#" class="bold" id ="but_one">1. Карбоновая основа</a></p>
+                   <p> <a href="#" id="text1" class="not-active">Сохраняет естественную подвижность стопы, а также позволяет мышцам стопы и голени активно работать на всех этапах шага.
+                </a></p></div>
+
+                <div class="to-be-changed" >
+                   <p> <a href="#" class="bold" id ="but_two">2. Постинги</a></p>
+
+                 <p>   <a href="#" id ="text2">Опорно-корригирующие элементы устанавливаются специалистом с учетом особенностей конкретной стопы. Форму и размеры постингов можно менять, что позволяет разделить коррекцию на этапы. Постепенное изменение биомеханики переносится комфортнее
+                        и является естественным для опорно-двигательной системы. </a></p>
+                </div>
+                <div class="to-be-changed" >
+                  <p>  <a href="#" class="bold" id ="but_three">
+                        3. Мягкое полимерное ложе
+                    </a></p>
+
+                 <p>   <a href="#" id ="text3">Приятное коже покрытие обеспечивает комфорт при использовании в течение всего дня. </a></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="text">
-      <div>Разные стельки отличаются друг от друга толщиной карбоновой основы и мягкого ложа, а также свободно размещаемыми элементами (постингами).</div>
-
-      <div id="karbon" class="to-be-changed">
-        <p class="bold">1. Карбоновая основа</p>
-        <p>Сохраняет естественную подвижность стопы, а также позволяет мышцам стопы и голени активно работать на всех этапах шага.</p>
-      </div>
-
-      <div id="postingi" class="to-be-changed">
-        <p class="bold">2. Постинги</p>
-
-        <p>Опорно-корригирующие элементы устанавливаются специалистом с учетом особенностей конкретной стопы. Форму и размеры постингов можно менять, что позволяет разделить коррекцию на этапы. Постепенное изменение биомеханики переносится комфортнее
-          и является естественным для опорно-двигательной системы. </p>
-      </div>
-      <div id="lozhe" class="to-be-changed">
-        <p class="bold">
-          3. Мягкое полимерное ложе</strong>
-        </p>
-
-        <p>Приятное коже покрытие обеспечивает комфорт при использовании в течение всего дня. </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!--Форма обратной связи -->
 <div class="block-second">
@@ -108,7 +134,7 @@
         <div class="part_one">
           <label>
             <div class="title-input">Дата <span class="pink">*</span></div>
-            <div class="datetime"><input type="date" value="2022-01-19" /></div>
+            <div class="datetime"><input type="text" id="tbDate" placeholder="26 октября, Вт"></div>
           </label>
         </div>
         <div class="part_two">
@@ -122,6 +148,8 @@
           </label>
         </div>
       </div>
+
+
 
       <div class="checkbox column">
         <input type="checkbox" id="checkbox_1" checked required>
@@ -158,17 +186,123 @@ form.submit(function (e) {
   return;
 });
 
+
 	</script>
 	
 <script>
 $(document).ready(function() {
-	$('li').on('click', function() {
-		$('li').removeClass('active');
+	$('a').on('click', function() {
+		$('a').removeClass('active');
     $(this).addClass('active');
 	});
 });
 </script>	
+
+<script>
+
+let changeColour = function (e) {
+  if (e.target === but_one) {
+    but_one.style.color = "#dc45a6";
+	but_two.style.color = "inherit";
+	 but_three.style.color = "inherit";
+    one.style.backgroundImage = 'url(img/one.png)';
+    two.style.backgroundImage = 'url(img/Ellipse52.png)';
+	three.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text1.style.color = "#dc45a6";
+	text2.style.color = "inherit";
+	text3.style.color = "inherit";
+  }
+
+  if (e.target === but_two) {
+    but_two.style.color = "#dc45a6";
+	but_one.style.color = "inherit";
+	 but_three.style.color = "inherit";
+    two.style.backgroundImage = 'url(img/two.png)';
+    one.style.backgroundImage = 'url(img/Ellipse52.png)';
+	three.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text2.style.color = "#dc45a6";
+	text1.style.color = "inherit";
+	text3.style.color = "inherit";
 	
+  }
+  
+    if (e.target === but_three) {
+    but_three.style.color = "#dc45a6";
+	but_two.style.color = "inherit";
+	 but_one.style.color = "inherit";
+    three.style.backgroundImage = 'url(img/three.png)';
+    one.style.backgroundImage = 'url(img/Ellipse52.png)';
+	two.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text3.style.color = "#dc45a6";
+	text2.style.color = "inherit";
+	text1.style.color = "inherit";
+	
+  }
+  
+      if (e.target === one) {
+    one.style.backgroundImage = 'url(img/one.png)';
+	but_three.style.color = "inherit";
+	 but_two.style.color = "inherit";
+	 but_one.style.color = "#dc45a6";
+    two.style.backgroundImage = 'url(img/Ellipse52.png)';
+	three.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text1.style.color = "#dc45a6";
+	text2.style.color = "inherit";
+	text3.style.color = "inherit";
+	
+	
+  }
+  
+   if (e.target === two) {
+    two.style.backgroundImage = 'url(img/two.png)';
+	but_one.style.color = "inherit";
+	 but_three.style.color = "inherit";
+	 but_two.style.color = "#dc45a6";
+    one.style.backgroundImage = 'url(img/Ellipse52.png)';
+	three.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text2.style.color = "#dc45a6";
+	text1.style.color = "inherit";
+	text3.style.color = "inherit";
+
+  }
+  
+     if (e.target === three) {
+    three.style.backgroundImage = 'url(img/three.png)';
+	but_one.style.color = "inherit";
+	 but_two.style.color = "inherit";
+	 but_three.style.color = "#dc45a6";
+    one.style.backgroundImage = 'url(img/Ellipse52.png)';
+	two.style.backgroundImage = 'url(img/Ellipse52.png)';
+	text3.style.color = "#dc45a6";
+	text2.style.color = "inherit";
+	text1.style.color = "inherit";
+	
+  }
+};
+
+but_one.addEventListener("click", changeColour, false);
+but_two.addEventListener("click", changeColour, false);
+but_three.addEventListener("click", changeColour, false);
+one.addEventListener("click", changeColour, false);
+two.addEventListener("click", changeColour, false);
+three.addEventListener("click", changeColour, false);
+text1.addEventListener("click", changeColour, false);
+text2.addEventListener("click", changeColour, false);
+text3.addEventListener("click", changeColour, false);
+</script>	
+	
+<script>
+ $(function() {
+    $("#date_eat").datepicker({
+        dateFormat: "yy-mm-dd",
+        altFormat: "'другой формат: 'DD, d MM, yy",
+        altField: "#div",
+        onSelect: function(a) {
+
+        }
+    })
+});
+  </script>	
 	
 </body>
 
